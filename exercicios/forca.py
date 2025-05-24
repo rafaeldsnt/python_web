@@ -22,6 +22,12 @@ def hangmangame():
         print(f"Tentativas de Jogadas --> {playattempt}")
         print(f"=====================================================================================")
         letter = (input("Informe uma letra qualquer ? "))
+
+        print(f"=====================================================================================")
+        for _ in range(0,len(wordselect)):
+            print("_", end=" ")
+        print(f"=====================================================================================")
+
         
         if (letter not in wordsalreadytried):
            
@@ -39,7 +45,7 @@ def hangmangame():
                     wordsalreadycorrect.append(letter+"("+str(wordselect.count(letter))+"x)")
                     playattempt = playattempt - wordselect.count(letter)
                 else:
-                    wordsalreadytried.append(letter)
+                    wordsalreadycorrect.append(letter)
                     playattempt = playattempt - wordselect.count(letter)
 
             else:
